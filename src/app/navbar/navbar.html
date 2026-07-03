@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand navbar-dark bg-primary px-3 shadow-sm">
+  <div class="container-fluid">
+
+    <a class="navbar-brand fs-4" href="#">Color Game</a>
+
+    <div class="navbar-nav ms-auto align-items-center">
+
+      <!-- Username -->
+      <span class="nav-link text-white-50 active me-3" *ngIf="authService.username">
+        {{ authService.username }}
+      </span>
+
+      <!-- LOGIN (si pas connecté) -->
+      <a class="nav-link text-white active fw-semibold" *ngIf="!authService.username" routerLink="/login"
+        style="cursor: pointer;">
+        Login
+      </a>
+
+      <!-- LOGOUT (si connecté) -->
+      <a class="nav-link text-white active fw-semibold" *ngIf="authService.username" (click)="logout()"
+        style="cursor: pointer;">
+        Logout
+      </a>
+
+    </div>
+
+  </div>
+</nav>

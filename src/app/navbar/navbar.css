@@ -1,0 +1,9 @@
+
+.navbar {
+  min-height: 56px;
+  background-color: #007bff !important; 
+}
+
+.navbar-brand {
+  font-weight: 500;
+}

@@ -1,0 +1,98 @@
+<app-navbar></app-navbar>
+
+
+<div class="container mt-4">
+
+    <h1 class="mb-4">Login</h1>
+
+
+    <form (ngSubmit)="login()" novalidate>
+
+
+        
+
+        <div class="mb-3">
+
+            <label class="form-label text-dark">
+                Email
+            </label>
+
+
+            <div class="input-group">
+
+                <span class="input-group-text bg-light text-secondary">
+                    @
+                </span>
+
+
+                <input type="text" name="username" placeholder="Username" class="form-control" [(ngModel)]="username">
+
+            </div>
+
+
+            <div class="text-danger small mt-1" *ngIf="usernameError">
+                {{usernameError}}
+            </div>
+
+
+        </div>
+
+
+
+        
+
+
+        <div class="mb-3">
+
+            <label class="form-label text-dark">
+                Password
+            </label>
+
+
+            <div class="input-group">
+
+
+                <span class="input-group-text bg-light text-secondary">
+
+                    🔒
+
+                </span>
+
+
+                <input type="password" name="password" placeholder="Password" class="form-control"
+                    [(ngModel)]="password">
+
+
+            </div>
+
+
+            <div class="text-danger small mt-1" *ngIf="passwordError">
+
+                {{passwordError}}
+
+            </div>
+
+
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary px-3 py-2 mt-2">
+
+            Login
+
+        </button>
+
+
+
+        <div class="text-danger mt-3" *ngIf="loginError">
+
+            {{loginError}}
+
+        </div>
+
+
+    </form>
+
+
+</div>

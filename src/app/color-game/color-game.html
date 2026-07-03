@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<div class="game-container">
+    <div class="inputs">
+        <label>
+            Nombre de lignes
+        </label>
+        <input type="number" min="1" max="20" [(ngModel)]="rows" (change)="changeRows()">
+        <label>
+            Nombre de colonnes
+        </label>
+        <input type="number" min="1" max="20" [(ngModel)]="cols" (change)="changeCols()">
+    </div>
+
+
+    <div class="grid">
+
+
+        <div *ngFor="let row of grid; let i=index" class="row">
+
+
+            <input *ngFor="let color of row; let j=index" (click)="openColorPopup(i,j)" [style.background]="grid[i][j]"
+                readonly>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="popup-background" *ngIf="showPopup">
+
+
+        <div class="popup">
+
+
+            <label>
+                Couleur
+            </label>
+
+
+            <input type="text" [(ngModel)]="selectedColor">
+
+
+            <div class="buttons">
+
+
+                <button class="cancel" (click)="cancelColor()">
+
+                    Annuler
+
+                </button>
+                <button class="validate" (click)="validateColor()">
+
+                    Valider
+
+                </button>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

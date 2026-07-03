@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Navbar } from '../navbar/navbar';
+
+@Component({
+  selector: 'app-home',
+  standalone: true,
+  imports: [Navbar],
+  templateUrl: './home.html',
+  styleUrl: './home.css',
+})
+export class Home {
+  constructor(private router: Router) {}
+  goToGame() {
+    this.router.navigate(['/color-game']); // Navigation vers la route du jeu de couleurs
+  }
+}
