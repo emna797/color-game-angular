@@ -29,13 +29,13 @@ export class Login {
   ) {}
 
   login() {
-    // Réinitialisation des erreurs
+    
 
     this.usernameError = '';
     this.passwordError = '';
     this.loginError = '';
 
-    // Vérification Username
+    
 
     if (this.username.trim() === '') {
       this.usernameError = '* Username obligatoire';
@@ -43,7 +43,7 @@ export class Login {
       this.usernameError = '* Username doit contenir plus de 6 caractères';
     }
 
-    // Vérification Password
+    
 
     if (this.password.trim() === '') {
       this.passwordError = '* Password obligatoire';
@@ -51,13 +51,13 @@ export class Login {
       this.passwordError = '* Password doit contenir plus de 5 caractères';
     }
 
-    // Arrêt si erreur
+    
 
     if (this.usernameError !== '' || this.passwordError !== '') {
       return;
     }
 
-    // Connexion réussie
+   
 
     console.log('Connexion réussie');
 

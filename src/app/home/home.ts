@@ -12,6 +12,5 @@ import { Navbar } from '../navbar/navbar';
 export class Home {
   constructor(private router: Router) {}
   goToGame() {
-    this.router.navigate(['/color-game']); // Navigation vers la route du jeu de couleurs
-  }
+    this.router.navigate(['/color-game']); 
 }
